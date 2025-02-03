@@ -2,14 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-
-# Rezept (Titel, Beschreibung, Zubereitungszeit)
-# Zutat (Name, Menge, Einheit)
-
-
-
-
-
 class Zutat(models.Model):
     name = models.CharField(max_length=100)
     menge = models.CharField(max_length=100)
