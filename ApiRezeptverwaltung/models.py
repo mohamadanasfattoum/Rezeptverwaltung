@@ -17,8 +17,8 @@ class Zutat(models.Model):
 class Rezept(models.Model):
     titel = models.CharField(max_length=100)
     beschreibung = models.TextField(max_length=1000)
-    zubereitungszeit = models.DateTimeField()
-    zutaten = models.ForeignKey(Zutat, related_name='zutaten', on_delete=models.SET_NULL,null=True, blank=True)
+    zubereitungszeit = models.PositiveIntegerField()
+    zutaten = models.ManyToManyField(Zutat, related_name='zutaten')
 
 
     def __str__(self):

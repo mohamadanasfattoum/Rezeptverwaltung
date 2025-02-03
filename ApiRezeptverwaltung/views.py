@@ -6,5 +6,5 @@ from .serializers import RezeptSerializer
 
 
 class RezeptAPIViews(generics.ListCreateAPIView):
-    queryset = Rezept
+    queryset = Rezept.objects.all()
     serializer_class = RezeptSerializer
